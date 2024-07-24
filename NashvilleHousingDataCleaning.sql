@@ -122,13 +122,13 @@ WITH RowNumCTE AS(
 Select *, 
 	ROW_NUMBER() OVER (
 	PARTITION BY ParcelID,
-				 PropertyAddress,
-				 SaleDateConverted,
-				 SalePrice,
-				 LegalReference
-				 Order by 
-					UniqueID
-					) row_num
+		     PropertyAddress,
+		     SaleDateConverted,
+		     SalePrice,
+		     LegalReference
+		     Order by 
+		       UniqueID
+		        ) row_num
 From NashvileHousing
 
 )
